@@ -2,26 +2,23 @@
 //
 
 #include "pch.h"
+#include "point.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+
 using namespace std;
-void draw(int x_, int y_, char symb_)
-{
-	COORD position = { x_,y_ };
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleCursorPosition(hConsole, position);
-	cout << symb_;
-}
+
 int main()
 {
-
-	int x = 10;
-	int y = 10;
-	char symb = '#';
-	draw(x, y, symb);
-	x = 20;
-	y = 20;
-	symb = '$';
-	draw(x, y, symb);
+	point p1;
+    p1.x = 15;
+	p1.y = 15;
+	p1.symb = '@';
+	p1.draw();
+	point p2;
+	p2.x = 5;
+	p2.y = 5;
+	p2.symb = '%';
+	p2.draw();
 }

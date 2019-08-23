@@ -1,4 +1,3 @@
 ﻿  Snake.cpp
-c:\snake\snake\snake\snake.cpp(11): warning C4838: преобразование из "int" в "SHORT" требует сужающего преобразования
-  LINK : не найден или не выполнена сборка C:\Snake\Snake\Debug\Snake.exe при последней инкрементной компоновке; выполняется полная компоновка
+c:\snake\snake\snake\point.h(16): warning C4838: преобразование из "int" в "SHORT" требует сужающего преобразования
   Snake.vcxproj -> C:\Snake\Snake\Debug\Snake.exe
