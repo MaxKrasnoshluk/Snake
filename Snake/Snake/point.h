@@ -11,6 +11,12 @@ public:
 	int x;
 	int y;
 	char symb;
+	point(int _x, int _y, char _symb)
+	{
+		x = _x;
+		y = _y;
+		symb = _symb;
+	}
 	void draw()
 	{
 		COORD position = { x, y};

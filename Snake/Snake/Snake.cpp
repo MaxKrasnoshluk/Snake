@@ -11,14 +11,9 @@ using namespace std;
 
 int main()
 {
-	point p1;
-    p1.x = 15;
-	p1.y = 15;
-	p1.symb = '@';
+	point p1(2, 6, '&');   
 	p1.draw();
-	point p2;
-	p2.x = 5;
-	p2.y = 5;
-	p2.symb = '%';
+	point p2(5, 9, '@');
 	p2.draw();
+	
 }
