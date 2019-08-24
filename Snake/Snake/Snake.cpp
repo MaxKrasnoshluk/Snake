@@ -2,12 +2,13 @@
 //
 
 #include "pch.h"
+#include "wall.h"
 #include "point.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#include <list>     
-#include <iterator> // заголовок итераторов
+  
+
 using namespace std;
 
 int main()
@@ -20,10 +21,6 @@ int main()
 	p3.draw();
 	point p4(8, 1, '!');
 	p4.draw();
-	list<point> Pointlist;
-	Pointlist.push_back(p1);
-	Pointlist.push_back(p2);
-	Pointlist.push_back(p3);
-	Pointlist.push_back(p4);
-	
+	wall line(5, 10, 10, '-');
+	line.drow();
 }
