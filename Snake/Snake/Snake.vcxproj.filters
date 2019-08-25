@@ -21,7 +21,7 @@
     <ClInclude Include="point.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="wall.h">
+    <ClInclude Include="figure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
