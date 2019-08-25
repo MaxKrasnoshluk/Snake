@@ -4,6 +4,7 @@
 #include "pch.h"
 #include "figure.h"
 #include "point.h"
+#include "Direction.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -23,18 +24,12 @@ int main()
 	linev_left.drow();
 	wallvertical linev_rigth(2, 24, 78, 'v');
 	linev_rigth.drow();
-	point p1(6, 6, '&');
-	p1.draw();
+	point p1(10, 10, '*');
+	snake shiva(p1, 3, Up );
+	shiva.drow();
 	COORD position = { 0, 24 };
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hConsole, position);
 	cout << endl;
-	/*point p1(2, 6, '&');
-	p1.draw();
-	point p2(5, 9, '@');
-	p2.draw();
-	point p3(7, 8, '*');
-	p3.draw();
-	point p4(8, 1, '!');
-	p4.draw();*/
+	
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "pch.h"
+#include "Direction.h"
 #include <iostream>
 #include <windows.h>
 
@@ -16,6 +17,32 @@ public:
 		x = _x;
 		y = _y;
 		symb = _symb;
+	}
+	point setpoint (point p)
+	{
+		x = p.x;
+		y = p.y;
+		symb = p.symb;
+		return *this;
+	}
+	void move(int offset, dir direction )
+	{
+		if (direction == Left)
+		{
+			x = x - offset;
+		}
+		if (direction == Rigth)
+		{
+			x = x + offset;
+		}
+		if (direction == Up)
+		{
+			y = y + offset;
+		}
+		if (direction == Down)
+		{
+			y = y - offset;
+		}
 	}
 	void draw()
 	{
