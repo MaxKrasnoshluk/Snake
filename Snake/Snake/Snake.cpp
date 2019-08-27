@@ -27,6 +27,7 @@ int main()
 	point p1(10, 10, '*');
 	snake shiva(p1, 3, Up );
 	shiva.drow();
+	shiva.move();
 	COORD position = { 0, 24 };
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hConsole, position);

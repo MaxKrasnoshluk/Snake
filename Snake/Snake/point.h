@@ -37,11 +37,11 @@ public:
 		}
 		if (direction == Up)
 		{
-			y = y + offset;
+			y = y - offset;
 		}
 		if (direction == Down)
 		{
-			y = y - offset;
+			y = y + offset;
 		}
 	}
 	void draw()
@@ -50,6 +50,11 @@ public:
 		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleCursorPosition(hConsole, position);
 		cout << symb;
+	}
+	void clear()
+	{
+		symb = ' ';
+		draw();
 	}
 };
 
