@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Direction.h" />
+    <ClInclude Include="direction.h" />
     <ClInclude Include="figure.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="point.h" />

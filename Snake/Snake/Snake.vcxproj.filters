@@ -27,7 +27,7 @@
     <ClInclude Include="resource.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Direction.h">
+    <ClInclude Include="direction.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

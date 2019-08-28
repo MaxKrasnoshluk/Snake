@@ -3,12 +3,12 @@
 
 #include "pch.h"
 #include "figure.h"
+#include "direction.h"
 #include "point.h"
-#include "Direction.h"
-#include <iostream>
 #include <conio.h>
+#include <iostream>
 #include <windows.h>
-  
+#pragma warning(disable:4996) // POSIX name deprecated
 
 using namespace std;
 
@@ -25,9 +25,19 @@ int main()
 	wallvertical linev_rigth(2, 24, 78, 'v');
 	linev_rigth.drow();
 	point p1(10, 10, '*');
-	snake shiva(p1, 3, Up );
+	snake shiva(p1, 7, Rigth );
 	shiva.drow();
-	shiva.move();
+	while (true)
+	{
+		shiva.move();
+		while (_kbhit())
+		{
+			shiva.key_action(getch());
+		}
+		
+		Sleep(200);
+	}
+	
 	COORD position = { 0, 24 };
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hConsole, position);

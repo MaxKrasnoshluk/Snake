@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-#include "Direction.h"
+#include "direction.h"
 #include <iostream>
 #include <windows.h>
 
@@ -46,6 +46,12 @@ public:
 	}
 	void draw()
 	{
+		void* handle = GetStdHandle(STD_OUTPUT_HANDLE);
+		CONSOLE_CURSOR_INFO structCursorInfo;
+		GetConsoleCursorInfo(handle, &structCursorInfo);
+		structCursorInfo.bVisible = FALSE;
+		SetConsoleCursorInfo(handle, &structCursorInfo);
+
 		COORD position = { x, y};
 		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleCursorPosition(hConsole, position);
