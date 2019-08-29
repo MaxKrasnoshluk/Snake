@@ -4,6 +4,7 @@
 #include "pch.h"
 #include "figure.h"
 #include "direction.h"
+#include "food.h"
 #include "point.h"
 #include <conio.h>
 #include <iostream>
@@ -27,14 +28,21 @@ int main()
 	point p1(10, 10, '*');
 	snake shiva(p1, 7, Rigth );
 	shiva.drow();
+	food new_apple (80, 28, '@');
+	point food = new_apple.generate_food();
+	food.draw();
 	while (true)
-	{
+	{		
+		if (shiva.eat(food))
+		{
+			food = new_apple.generate_food();
+			food.draw();
+		}
 		shiva.move();
 		while (_kbhit())
 		{
 			shiva.key_action(getch());
-		}
-		
+		}		
 		Sleep(200);
 	}
 	

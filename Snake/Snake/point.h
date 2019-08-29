@@ -57,6 +57,10 @@ public:
 		SetConsoleCursorPosition(hConsole, position);
 		cout << symb;
 	}
+	bool have_dinner(point p)
+	{
+		return p.x == this->x && p.y == this->y;
+	}
 	void clear()
 	{
 		symb = ' ';
